@@ -2751,7 +2751,7 @@
 				<key>BundlePath</key>
 				<string>AirportMtkWlan.kext</string>
 				<key>Comment</key>
-				<string>AirportMtkWlan 2.1.0 Tahoe; WCL radio/scan stability fixes</string>
+				<string>AirportMtkWlan 2.1.6 Tahoe - MediaTek MT7921/MT7922</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -3170,6 +3170,28 @@
 				<key>TextMode</key>
 				<true/>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<false/>
+				<key>Comment</key>
+				<string>One-time firmware registration from the USB</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Flavour</key>
+				<string>Shell</string>
+				<key>FullNvramAccess</key>
+				<true/>
+				<key>Name</key>
+				<string>Registrar OpenCore no SSD (UEFI Shell)</string>
+				<key>Path</key>
+				<string>OpenShell.efi</string>
+				<key>RealPath</key>
+				<false/>
+				<key>TextMode</key>
+				<true/>
+			</dict>
 		</array>
 	</dict>
 	<key>NVRAM</key>
@@ -3200,25 +3222,27 @@
 				<data>
 				Rg==
 				</data>
+				<key>bluetoothExternalDongleFailed</key>
+				<data>
+				AA==
+				</data>
+				<key>bluetoothInternalControllerInfo</key>
+				<data>
+				AAAAAAAAAAAAAAAAAAA=
+				</data>
 				<key>boot-args</key>
-				<string>-v debug=0x100 keepsyms=1 -amfipassbeta -allow3d -disablegfxfirmware -igfxdvmt -vi2c-force-polling ctrsmt=full revpatch=sbvmm nvfb=1 nvaccel=1 nvfbheads=4 -nvkmsnosmooth amfi_get_out_of_my_way=0x1 amfi=0x80 ipc_control_port_options=0 gfxrst=4 -no160 -mtknoamsdu -novht -noht40</string>
+				<string>-v debug=0x100 keepsyms=1 -amfipassbeta -allow3d -disablegfxfirmware -igfxdvmt -vi2c-force-polling ctrsmt=full revpatch=sbvmm nvfb=1 nvaccel=1 nvfbheads=4 -nvkmsnosmooth amfi_get_out_of_my_way=0x1 amfi=0x80 ipc_control_port_options=0 gfxrst=4 -no160 -mtknoamsdu</string>
 				<key>csr-active-config</key>
 				<data>
 				QwoAAA==
 				</data>
+				<key>mtk-wifi-band</key>
+				<string>5</string>
 				<key>prev-lang:kbd</key>
 				<data>
 				</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
-				<key>bluetoothInternalControllerInfo</key>
-				<data>
-				AAAAAAAAAAAAAAAAAAA=
-				</data>
-				<key>bluetoothExternalDongleFailed</key>
-				<data>
-				AA==
-				</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -3238,6 +3262,7 @@
 				<string>boot-args</string>
 				<string>bluetoothInternalControllerInfo</string>
 				<string>bluetoothExternalDongleFailed</string>
+				<string>mtk-wifi-band</string>
 			</array>
 		</dict>
 		<key>LegacyOverwrite</key>
